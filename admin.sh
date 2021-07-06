@@ -50,11 +50,12 @@ read wordlist
 sleep 1
 echo -e ${CNC}"\n[+] Searching For Admin Panel :)"
 for i in $(cat $wordlist); do
-file=$(curl -s -o /dev/null -w "%{http_code}" $domain$i)
+file=$(curl -s -o /dev/null -w "%{http_code}" $domain/$i)
 echo "$file" >> output.txt
-if grep -q 200   <<<"$file"
+ if [ "$file" = "301" ] || [ "$file" = "302" ] || [ "$file" = "201" ] || [ "$file" = "200" ]
   then
-  echo -n -e ${RED}"\n[ ✔ ] $domain ${CP}"[Directory: $i]" ${RED}[FOUND]\n"
+  echo -n -e ${RED}"\n[ ✔ ] $domain/$i ${CP}"[Directory: $i]" ${RED}[FOUND]\n"
+
   rm output.txt
   exit 1
   else
