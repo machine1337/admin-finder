@@ -81,3 +81,4 @@ exit
 
 banner
 admin_find
+#coded by Machine404 Don't copy this code without giving me credit.
