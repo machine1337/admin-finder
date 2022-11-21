@@ -17,7 +17,4 @@
 # Pre-requiste:
     Only curl is required
     
-# Credit:
-     [facebook] (https://facebook.com/unknownclay)
-     [Telegram] (https://t.me/clay404)
-     [Twitter] (https://twitter.com/whoami4041)
+
